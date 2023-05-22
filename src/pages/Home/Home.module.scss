@@ -1,0 +1,79 @@
+.section {
+  font-family: 'PT Root UI', sans-serif;
+  display: flex;
+  padding: 16px;
+  flex-direction: column;
+  background-color: #1a2232;
+
+  &__title {
+    display: flex;
+    align-items: center;
+
+    h2 {
+      margin: 0;
+    }
+  }
+
+  &__icon {
+    margin-top: 6px;
+    width: 20%;
+  }
+
+  &__movies {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 5%;
+  }
+
+  &__title {
+    line-height: 19px;
+    color: #ffffff;
+    font-size: 16px;
+  }
+
+  &__genre {
+    font-size: 14px;
+    color: rgba(99, 115, 148, 1);
+  }
+
+  .movie {
+    position: relative;
+    width: 48%;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 14px;
+    flex-direction: column;
+
+    .nota {
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-bottom: 150%; /* Defina a altura da imagem aqui */
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      span {
+        font-weight: normal;
+        position: absolute;
+        text-align: center;
+        top: 1%;
+        left: 78%;
+        height: 8%;
+        width: 20%;
+        color: white;
+        background-color: #ff8036;
+        border-radius: 4px;
+      }
+    }
+  }
+}
