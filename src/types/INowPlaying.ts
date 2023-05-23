@@ -1,5 +1,7 @@
 /* eslint-disable semi */
 
+import ICredits from './ICredits';
+import IDetails from './IDetails';
 import IGenres from './IGenres';
 import IVideos from './IVideos';
 
@@ -11,6 +13,8 @@ export default interface INowPlaying {
   poster_path: string;
   release_date: string;
   vote_average: number;
-  genres?: IGenres[];
+  details?: IDetails;
   videos?: IVideos[];
+  credits?: ICredits[];
+  genres?: IGenres[];
 }

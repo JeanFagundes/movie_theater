@@ -1,44 +1,63 @@
 /* eslint-disable react/jsx-key */
 import BackButton from 'components/BackButton';
 import styles from './AboutMovie.module.scss';
-import { SetStateAction, useEffect, useState } from 'react';
-import axios from 'axios';
-import IVideos from 'types/IVideos';
+import { SetStateAction, useState } from 'react';
 import YouTubeVideo from './VideoPlayer';
+import RequisicaoAxios from 'components/RequisicaoAxios';
+import { useParams } from 'react-router-dom';
+import INowPlaying from 'types/INowPlaying';
 
 export default function AboutMovie() {
-  const [activeTab, setActiveTab] = useState<SetStateAction<number>>(0);
-  const [videos, setVideos] = useState<IVideos[]>([]);
-  useEffect(() => {
-    const options = {
-      method: 'GET',
-      url: 'https://api.themoviedb.org/3/movie/502356/videos',
-      params: { language: 'pt-BR' },
-      headers: {
-        accept: 'application/json',
-        Authorization:
-          'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkMDAzZmM5NzM4MjFlNThjZGY1OTgxOGEwNDQ4MjUzYSIsInN1YiI6IjY0NjcwMjAxYTUwNDZlMDE2ODM2MWY2OSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.bOZaLsMPZbnvsfJSFyDYEHMdbju54j9XNTD8OBd7f-A',
-      },
-    };
+  const [activeTab, setActiveTab] = useState<number>(0);
+  const moviesHook = RequisicaoAxios();
 
-    axios
-      .request(options)
-      .then(function (response) {
-        setVideos(response.data.results);
-        console.log('aqui esá', response.data.results[0].key);
-      })
-      .catch(function (error) {
-        console.error(error);
-      });
-  }, []);
-
+  const { id } = useParams<{ id: string }>();
+  const nowPlaying: INowPlaying[] = moviesHook;
   const handleTabClick = (tabIndex: SetStateAction<number>) => {
     setActiveTab(tabIndex);
   };
 
+  const findVideos = () => {
+    const movieVideo = nowPlaying.find((movie) => movie.id === Number(id));
+    if (!movieVideo) {
+      return null;
+    }
+    const videos = movieVideo.videos || [];
+    return videos[0]?.key;
+  };
+
+  const findTitle = () => {
+    const movieTitle = nowPlaying.find((movie) => movie.id === Number(id));
+    if (!movieTitle) {
+      return null;
+    }
+    return movieTitle.title;
+  };
+  const movieDetails = nowPlaying.find((movie) => movie.id === Number(id));
+  if (!movieDetails) {
+    return <div></div>;
+  }
+
+  const findRuntime = () => {
+    const movieRuntime = nowPlaying.find((movie) => movie.id === Number(id));
+    if (!movieRuntime) {
+      console.log('entrou aqui ');
+      return null;
+    }
+    const runtime = movieRuntime.details || [];
+    return runtime;
+  };
+
+  moviesHook
+    .filter((movie) => movie.id === Number(id))
+    .map((movie) => console.log(movie.credits));
+
+  const runtime = findRuntime();
+  const videoKey = findVideos();
+
   return (
     <div className={styles.container}>
-      <BackButton>{'Super mario world'}</BackButton>
+      <BackButton>{findTitle()}</BackButton>
       <ul className={styles.container__tabs}>
         <li
           className={`${styles.container__tab} ${
@@ -55,7 +74,70 @@ export default function AboutMovie() {
           Sessions
         </li>
       </ul>
-      <YouTubeVideo videoKey={videos[0]?.key} />
+      {typeof videoKey === 'string' && videoKey !== '' ? (
+        <YouTubeVideo videoKey={videoKey} />
+      ) : (
+        <div>Trailer não divulgado</div>
+      )}
+
+      <div className={styles.container__sectionNota}>
+        <ul className={styles.container__notaList}>
+          <li className={styles.container__list}>{movieDetails.vote_average}</li>
+          <li className={styles.container__listName}>IMDB</li>
+        </ul>
+        <ul className={styles.container__notaList}>
+          <li className={styles.container__list}>7.9</li>
+          <li className={styles.container__listName}>Popular</li>
+        </ul>
+      </div>
+
+      {moviesHook
+        .filter((movie) => movie.id === Number(id))
+        .map((movie) => (
+          <div className={styles.container__section} key={movie.id}>
+            <p>{movie.overview}</p>
+            <ul>
+              <li className={styles.container__sectionLabel}>Runtime</li>
+              <li className={styles.container__sectionItem}>
+                {movie.details && movie.details?.runtime}
+              </li>
+            </ul>
+
+            <ul>
+              <li className={styles.container__sectionLabel}>Release</li>
+              <li className={styles.container__sectionItem}>
+                <span>{movie.release_date}</span>
+              </li>
+            </ul>
+            <ul>
+              <li className={styles.container__sectionLabel}>Genre</li>
+              <li className={styles.container__sectionItem}>
+                {movie.genres?.map((genres) => (
+                  <span key={genres.id}>{`${genres.name}, `}</span>
+                ))}
+              </li>
+            </ul>
+            <ul>
+              <li className={styles.container__sectionLabel}>Director</li>
+              <li className={styles.container__sectionItem}>
+                {movie.credits &&
+                  movie.credits
+                    .filter((credit) => credit.known_for_department === 'Director')
+                    .map((credit) => <span key={credit.id}>{credit.name}</span>)}
+              </li>
+            </ul>
+            <ul>
+              <li className={styles.container__sectionLabel}>Cast</li>
+              <li className={styles.container__sectionItem}>
+                {movie.credits &&
+                  movie.credits
+                    .filter((credit) => credit.known_for_department === 'Acting')
+                    .slice(0, 10)
+                    .map((credit) => <span key={credit.id}>{`${credit.name}, `}</span>)}
+              </li>
+            </ul>
+          </div>
+        ))}
     </div>
   );
 }

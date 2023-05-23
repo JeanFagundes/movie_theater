@@ -1,5 +1,5 @@
 interface YouTubeVideoProps {
-  videoKey: string;
+  videoKey: string | undefined;
 }
 
 function YouTubeVideo({ videoKey }: YouTubeVideoProps) {

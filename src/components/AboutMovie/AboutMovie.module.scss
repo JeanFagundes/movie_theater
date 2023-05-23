@@ -44,4 +44,62 @@
       }
     }
   }
+
+  &__sectionNota {
+    display: flex;
+    padding-bottom: 2%;
+  }
+
+  &__sectionNota ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    vertical-align: top;
+    text-align: center;
+  }
+
+  &__list {
+    font-size: 24px;
+    font-style: bold;
+    color: #ffffff;
+  }
+
+  &__listName {
+    font-size: 14px;
+    color: #637394;
+    fill: solid;
+  }
+
+  &__section {
+    padding: 0px 16px 16px 16px;
+    font-size: 14px;
+    background-color: #1a2232;
+  }
+
+  &__section ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    line-height: 24px;
+    font-size: 14px;
+  }
+
+  &__section p {
+    margin: 0;
+    padding-top: 0;
+    color: #ffffff;
+    line-height: 20px;
+    font-size: 14px;
+    text-align: left;
+  }
+
+  &__sectionLabel {
+    flex-basis: 30%;
+    color: #637394;
+  }
+
+  &__sectionItem {
+    color: #ffffff;
+  }
 }
