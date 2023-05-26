@@ -1,0 +1,468 @@
+{
+  "id": 502356,
+  "results": {
+    "AU": {
+      "link": "https://www.themoviedb.org/movie/502356-the-super-mario-bros-movie/watch?locale=AU",
+      "buy": [
+        {
+          "logo_path": "/peURlLlr8jggOwK53fJ5wdQl05y.jpg",
+          "provider_id": 2,
+          "provider_name": "Apple TV",
+          "display_priority": 10
+        },
+        {
+          "logo_path": "/5NyLm42TmCqCMOZFvH4fcoSNKEW.jpg",
+          "provider_id": 10,
+          "provider_name": "Amazon Video",
+          "display_priority": 12
+        },
+        {
+          "logo_path": "/shq88b09gTBYC4hA7K7MUL8Q4zP.jpg",
+          "provider_id": 68,
+          "provider_name": "Microsoft Store",
+          "display_priority": 18
+        },
+        {
+          "logo_path": "/zXDDsD9M5vO7lqoqlBQCOcZtKBS.jpg",
+          "provider_id": 429,
+          "provider_name": "Telstra TV",
+          "display_priority": 32
+        }
+      ],
+      "rent": [
+        {
+          "logo_path": "/peURlLlr8jggOwK53fJ5wdQl05y.jpg",
+          "provider_id": 2,
+          "provider_name": "Apple TV",
+          "display_priority": 10
+        },
+        {
+          "logo_path": "/5NyLm42TmCqCMOZFvH4fcoSNKEW.jpg",
+          "provider_id": 10,
+          "provider_name": "Amazon Video",
+          "display_priority": 12
+        },
+        {
+          "logo_path": "/shq88b09gTBYC4hA7K7MUL8Q4zP.jpg",
+          "provider_id": 68,
+          "provider_name": "Microsoft Store",
+          "display_priority": 18
+        },
+        {
+          "logo_path": "/zXDDsD9M5vO7lqoqlBQCOcZtKBS.jpg",
+          "provider_id": 429,
+          "provider_name": "Telstra TV",
+          "display_priority": 32
+        }
+      ]
+    },
+    "CA": {
+      "link": "https://www.themoviedb.org/movie/502356-the-super-mario-bros-movie/watch?locale=CA",
+      "buy": [
+        {
+          "logo_path": "/peURlLlr8jggOwK53fJ5wdQl05y.jpg",
+          "provider_id": 2,
+          "provider_name": "Apple TV",
+          "display_priority": 6
+        },
+        {
+          "logo_path": "/tbEdFQDwx5LEVr8WpSeXQSIirVq.jpg",
+          "provider_id": 3,
+          "provider_name": "Google Play Movies",
+          "display_priority": 8
+        },
+        {
+          "logo_path": "/yNr05VQlKK4dI0Ncwf9InIVGKs9.jpg",
+          "provider_id": 140,
+          "provider_name": "Cineplex",
+          "display_priority": 13
+        },
+        {
+          "logo_path": "/shq88b09gTBYC4hA7K7MUL8Q4zP.jpg",
+          "provider_id": 68,
+          "provider_name": "Microsoft Store",
+          "display_priority": 16
+        },
+        {
+          "logo_path": "/oIkQkEkwfmcG7IGpRR1NB8frZZM.jpg",
+          "provider_id": 192,
+          "provider_name": "YouTube",
+          "display_priority": 30
+        },
+        {
+          "logo_path": "/5NyLm42TmCqCMOZFvH4fcoSNKEW.jpg",
+          "provider_id": 10,
+          "provider_name": "Amazon Video",
+          "display_priority": 58
+        }
+      ],
+      "rent": [
+        {
+          "logo_path": "/peURlLlr8jggOwK53fJ5wdQl05y.jpg",
+          "provider_id": 2,
+          "provider_name": "Apple TV",
+          "display_priority": 6
+        },
+        {
+          "logo_path": "/tbEdFQDwx5LEVr8WpSeXQSIirVq.jpg",
+          "provider_id": 3,
+          "provider_name": "Google Play Movies",
+          "display_priority": 8
+        },
+        {
+          "logo_path": "/yNr05VQlKK4dI0Ncwf9InIVGKs9.jpg",
+          "provider_id": 140,
+          "provider_name": "Cineplex",
+          "display_priority": 13
+        },
+        {
+          "logo_path": "/shq88b09gTBYC4hA7K7MUL8Q4zP.jpg",
+          "provider_id": 68,
+          "provider_name": "Microsoft Store",
+          "display_priority": 16
+        },
+        {
+          "logo_path": "/oIkQkEkwfmcG7IGpRR1NB8frZZM.jpg",
+          "provider_id": 192,
+          "provider_name": "YouTube",
+          "display_priority": 30
+        },
+        {
+          "logo_path": "/5NyLm42TmCqCMOZFvH4fcoSNKEW.jpg",
+          "provider_id": 10,
+          "provider_name": "Amazon Video",
+          "display_priority": 58
+        }
+      ]
+    },
+    "GB": {
+      "link": "https://www.themoviedb.org/movie/502356-the-super-mario-bros-movie/watch?locale=GB",
+      "rent": [
+        {
+          "logo_path": "/5NyLm42TmCqCMOZFvH4fcoSNKEW.jpg",
+          "provider_id": 10,
+          "provider_name": "Amazon Video",
+          "display_priority": 4
+        },
+        {
+          "logo_path": "/peURlLlr8jggOwK53fJ5wdQl05y.jpg",
+          "provider_id": 2,
+          "provider_name": "Apple TV",
+          "display_priority": 5
+        },
+        {
+          "logo_path": "/tbEdFQDwx5LEVr8WpSeXQSIirVq.jpg",
+          "provider_id": 3,
+          "provider_name": "Google Play Movies",
+          "display_priority": 12
+        },
+        {
+          "logo_path": "/2pCbao1J9s0DMak2KKnEzmzHni8.jpg",
+          "provider_id": 130,
+          "provider_name": "Sky Store",
+          "display_priority": 14
+        },
+        {
+          "logo_path": "/shq88b09gTBYC4hA7K7MUL8Q4zP.jpg",
+          "provider_id": 68,
+          "provider_name": "Microsoft Store",
+          "display_priority": 16
+        },
+        {
+          "logo_path": "/oIkQkEkwfmcG7IGpRR1NB8frZZM.jpg",
+          "provider_id": 192,
+          "provider_name": "YouTube",
+          "display_priority": 22
+        },
+        {
+          "logo_path": "/5GEbAhFW2S5T8zVc1MNvz00pIzM.jpg",
+          "provider_id": 35,
+          "provider_name": "Rakuten TV",
+          "display_priority": 29
+        }
+      ],
+      "buy": [
+        {
+          "logo_path": "/5NyLm42TmCqCMOZFvH4fcoSNKEW.jpg",
+          "provider_id": 10,
+          "provider_name": "Amazon Video",
+          "display_priority": 4
+        },
+        {
+          "logo_path": "/peURlLlr8jggOwK53fJ5wdQl05y.jpg",
+          "provider_id": 2,
+          "provider_name": "Apple TV",
+          "display_priority": 5
+        },
+        {
+          "logo_path": "/tbEdFQDwx5LEVr8WpSeXQSIirVq.jpg",
+          "provider_id": 3,
+          "provider_name": "Google Play Movies",
+          "display_priority": 12
+        },
+        {
+          "logo_path": "/2pCbao1J9s0DMak2KKnEzmzHni8.jpg",
+          "provider_id": 130,
+          "provider_name": "Sky Store",
+          "display_priority": 14
+        },
+        {
+          "logo_path": "/shq88b09gTBYC4hA7K7MUL8Q4zP.jpg",
+          "provider_id": 68,
+          "provider_name": "Microsoft Store",
+          "display_priority": 16
+        },
+        {
+          "logo_path": "/oIkQkEkwfmcG7IGpRR1NB8frZZM.jpg",
+          "provider_id": 192,
+          "provider_name": "YouTube",
+          "display_priority": 22
+        },
+        {
+          "logo_path": "/5GEbAhFW2S5T8zVc1MNvz00pIzM.jpg",
+          "provider_id": 35,
+          "provider_name": "Rakuten TV",
+          "display_priority": 29
+        }
+      ]
+    },
+    "IE": {
+      "link": "https://www.themoviedb.org/movie/502356-the-super-mario-bros-movie/watch?locale=IE",
+      "rent": [
+        {
+          "logo_path": "/peURlLlr8jggOwK53fJ5wdQl05y.jpg",
+          "provider_id": 2,
+          "provider_name": "Apple TV",
+          "display_priority": 4
+        },
+        {
+          "logo_path": "/tbEdFQDwx5LEVr8WpSeXQSIirVq.jpg",
+          "provider_id": 3,
+          "provider_name": "Google Play Movies",
+          "display_priority": 7
+        },
+        {
+          "logo_path": "/5GEbAhFW2S5T8zVc1MNvz00pIzM.jpg",
+          "provider_id": 35,
+          "provider_name": "Rakuten TV",
+          "display_priority": 12
+        },
+        {
+          "logo_path": "/shq88b09gTBYC4hA7K7MUL8Q4zP.jpg",
+          "provider_id": 68,
+          "provider_name": "Microsoft Store",
+          "display_priority": 14
+        }
+      ],
+      "buy": [
+        {
+          "logo_path": "/peURlLlr8jggOwK53fJ5wdQl05y.jpg",
+          "provider_id": 2,
+          "provider_name": "Apple TV",
+          "display_priority": 4
+        },
+        {
+          "logo_path": "/tbEdFQDwx5LEVr8WpSeXQSIirVq.jpg",
+          "provider_id": 3,
+          "provider_name": "Google Play Movies",
+          "display_priority": 7
+        },
+        {
+          "logo_path": "/5GEbAhFW2S5T8zVc1MNvz00pIzM.jpg",
+          "provider_id": 35,
+          "provider_name": "Rakuten TV",
+          "display_priority": 12
+        },
+        {
+          "logo_path": "/shq88b09gTBYC4hA7K7MUL8Q4zP.jpg",
+          "provider_id": 68,
+          "provider_name": "Microsoft Store",
+          "display_priority": 14
+        }
+      ]
+    },
+    "IN": {
+      "link": "https://www.themoviedb.org/movie/502356-the-super-mario-bros-movie/watch?locale=IN",
+      "rent": [
+        {
+          "logo_path": "/ajbCmwvZ8HiePHZaOVEgm9MzyuA.jpg",
+          "provider_id": 232,
+          "provider_name": "Zee5",
+          "display_priority": 5
+        },
+        {
+          "logo_path": "/peURlLlr8jggOwK53fJ5wdQl05y.jpg",
+          "provider_id": 2,
+          "provider_name": "Apple TV",
+          "display_priority": 8
+        },
+        {
+          "logo_path": "/5NyLm42TmCqCMOZFvH4fcoSNKEW.jpg",
+          "provider_id": 10,
+          "provider_name": "Amazon Video",
+          "display_priority": 49
+        }
+      ],
+      "buy": [
+        {
+          "logo_path": "/peURlLlr8jggOwK53fJ5wdQl05y.jpg",
+          "provider_id": 2,
+          "provider_name": "Apple TV",
+          "display_priority": 8
+        }
+      ]
+    },
+    "NZ": {
+      "link": "https://www.themoviedb.org/movie/502356-the-super-mario-bros-movie/watch?locale=NZ",
+      "rent": [
+        {
+          "logo_path": "/od4YNSSLgOP3p8EtQTnEYfrPa77.jpg",
+          "provider_id": 273,
+          "provider_name": "Neon TV",
+          "display_priority": 2
+        },
+        {
+          "logo_path": "/peURlLlr8jggOwK53fJ5wdQl05y.jpg",
+          "provider_id": 2,
+          "provider_name": "Apple TV",
+          "display_priority": 4
+        },
+        {
+          "logo_path": "/shq88b09gTBYC4hA7K7MUL8Q4zP.jpg",
+          "provider_id": 68,
+          "provider_name": "Microsoft Store",
+          "display_priority": 10
+        }
+      ],
+      "buy": [
+        {
+          "logo_path": "/peURlLlr8jggOwK53fJ5wdQl05y.jpg",
+          "provider_id": 2,
+          "provider_name": "Apple TV",
+          "display_priority": 4
+        },
+        {
+          "logo_path": "/shq88b09gTBYC4hA7K7MUL8Q4zP.jpg",
+          "provider_id": 68,
+          "provider_name": "Microsoft Store",
+          "display_priority": 10
+        }
+      ]
+    },
+    "US": {
+      "link": "https://www.themoviedb.org/movie/502356-the-super-mario-bros-movie/watch?locale=US",
+      "rent": [
+        {
+          "logo_path": "/peURlLlr8jggOwK53fJ5wdQl05y.jpg",
+          "provider_id": 2,
+          "provider_name": "Apple TV",
+          "display_priority": 4
+        },
+        {
+          "logo_path": "/5NyLm42TmCqCMOZFvH4fcoSNKEW.jpg",
+          "provider_id": 10,
+          "provider_name": "Amazon Video",
+          "display_priority": 14
+        },
+        {
+          "logo_path": "/tbEdFQDwx5LEVr8WpSeXQSIirVq.jpg",
+          "provider_id": 3,
+          "provider_name": "Google Play Movies",
+          "display_priority": 15
+        },
+        {
+          "logo_path": "/oIkQkEkwfmcG7IGpRR1NB8frZZM.jpg",
+          "provider_id": 192,
+          "provider_name": "YouTube",
+          "display_priority": 16
+        },
+        {
+          "logo_path": "/21dEscfO8n1tL35k4DANixhffsR.jpg",
+          "provider_id": 7,
+          "provider_name": "Vudu",
+          "display_priority": 43
+        },
+        {
+          "logo_path": "/shq88b09gTBYC4hA7K7MUL8Q4zP.jpg",
+          "provider_id": 68,
+          "provider_name": "Microsoft Store",
+          "display_priority": 54
+        },
+        {
+          "logo_path": "/gbyLHzl4eYP0oP9oJZ2oKbpkhND.jpg",
+          "provider_id": 279,
+          "provider_name": "Redbox",
+          "display_priority": 55
+        },
+        {
+          "logo_path": "/xL9SUR63qrEjFZAhtsipskeAMR7.jpg",
+          "provider_id": 358,
+          "provider_name": "DIRECTV",
+          "display_priority": 59
+        },
+        {
+          "logo_path": "/79mRAYq40lcYiXkQm6N7YErSSHd.jpg",
+          "provider_id": 486,
+          "provider_name": "Spectrum On Demand",
+          "display_priority": 172
+        }
+      ],
+      "buy": [
+        {
+          "logo_path": "/peURlLlr8jggOwK53fJ5wdQl05y.jpg",
+          "provider_id": 2,
+          "provider_name": "Apple TV",
+          "display_priority": 4
+        },
+        {
+          "logo_path": "/5NyLm42TmCqCMOZFvH4fcoSNKEW.jpg",
+          "provider_id": 10,
+          "provider_name": "Amazon Video",
+          "display_priority": 14
+        },
+        {
+          "logo_path": "/tbEdFQDwx5LEVr8WpSeXQSIirVq.jpg",
+          "provider_id": 3,
+          "provider_name": "Google Play Movies",
+          "display_priority": 15
+        },
+        {
+          "logo_path": "/oIkQkEkwfmcG7IGpRR1NB8frZZM.jpg",
+          "provider_id": 192,
+          "provider_name": "YouTube",
+          "display_priority": 16
+        },
+        {
+          "logo_path": "/21dEscfO8n1tL35k4DANixhffsR.jpg",
+          "provider_id": 7,
+          "provider_name": "Vudu",
+          "display_priority": 43
+        },
+        {
+          "logo_path": "/shq88b09gTBYC4hA7K7MUL8Q4zP.jpg",
+          "provider_id": 68,
+          "provider_name": "Microsoft Store",
+          "display_priority": 54
+        },
+        {
+          "logo_path": "/gbyLHzl4eYP0oP9oJZ2oKbpkhND.jpg",
+          "provider_id": 279,
+          "provider_name": "Redbox",
+          "display_priority": 55
+        },
+        {
+          "logo_path": "/xL9SUR63qrEjFZAhtsipskeAMR7.jpg",
+          "provider_id": 358,
+          "provider_name": "DIRECTV",
+          "display_priority": 59
+        },
+        {
+          "logo_path": "/kJlVJLgbNPvKDYC0YMp3yA2OKq2.jpg",
+          "provider_id": 352,
+          "provider_name": "AMC on Demand",
+          "display_priority": 137
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,48 @@
+.container {
+  padding: 16px;
+  background: #1f293d 70%;
+
+  p {
+    margin: 0;
+    padding: 0;
+    color: #637394;
+    text-align: center;
+    line-height: 30px;
+  }
+
+  p.container__errorMessage {
+    color: #ac5217;
+    background-color: #212e46;
+    border-radius: 8px;
+  }
+
+  h2 {
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    text-align: center;
+  }
+  form button {
+    height: 8vh;
+    background: #ff8036;
+    color: #ffffff;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    margin-top: 10px;
+    box-shadow: 0px 0px 0px 1px black;
+  }
+  form input {
+    margin-top: 10px;
+    height: 56px;
+    font-size: 18px;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0px 0px 0px 0.1px #6d9eff;
+    background: #1f293d 70%;
+    color: #637394;
+    padding-left: 16px;
+    outline: none;
+  }
+}

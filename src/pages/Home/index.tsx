@@ -1,41 +1,69 @@
 import styles from './Home.module.scss';
 import { AiOutlineSearch } from 'react-icons/ai';
-import useNowPlayingMovies from 'components/RequisicaoAxios';
-import INowPlaying from 'types/INowPlaying';
-import { useNavigate } from 'react-router-dom';
+import RequisicaoContext from 'context/RequisicaoAxios';
+import { ChangeEvent, useContext, useState } from 'react';
+import MoviesInTheaters from 'components/moviesInTheaters';
 
 export default function Home() {
-  const moviesHook = useNowPlayingMovies();
+  const [searchOpen, setSearchOpen] = useState(false);
+  const [searchValue, setSearchValue] = useState('');
 
-  const navigate = useNavigate();
+  const moviesHook = useContext(RequisicaoContext);
 
-  function redirectAboutMovies(aboutMovie: INowPlaying) {
-    navigate(`/about/${aboutMovie.id}`);
-  }
+  const handleSearchIconClick = () => {
+    setSearchOpen(!searchOpen);
+  };
+  const handleSearchInputChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setSearchValue(event.target.value);
+  };
+
+  const filteredMovies = moviesHook.filter((movie) =>
+    movie.title.toLowerCase().includes(searchValue.toLowerCase())
+  );
 
   return (
     <section className={styles.section}>
       <div className={styles.section__title}>
-        <h2 className={styles.section__titleText}>Now in cinemas</h2>
-        <AiOutlineSearch className={styles.section__icon} size={24} />
+        <h2 className={styles.section__titleText}>Now in theaters</h2>
+        <AiOutlineSearch
+          onClick={handleSearchIconClick}
+          className={styles.section__icon}
+          size={24}
+        />
       </div>
 
+      {searchOpen && (
+        <div className={styles.section__iconSearch}>
+          <input
+            type="text"
+            placeholder="Digite o nome do filme"
+            onChange={handleSearchInputChange}
+            value={searchValue}
+          />
+        </div>
+      )}
       <div className={styles.section__movies}>
-        {moviesHook.map((movie) => (
-          <div className={styles.movie} key={movie.id}>
-            <div className={styles.nota} onClick={() => redirectAboutMovies(movie)}>
-              <img
-                src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-                alt={movie.title}
+        {searchOpen && searchValue
+          ? filteredMovies.map((movie) => (
+              <MoviesInTheaters
+                key={movie.id}
+                id={movie.id}
+                poster_path={movie.poster_path}
+                vote_average={movie.vote_average}
+                title={movie.title}
+                genres={movie.genres?.[0]}
               />
-              <span>{movie.vote_average.toFixed(1)}</span>
-            </div>
-            <span className={styles.section__title}>{movie.title}</span>
-            <span className={styles.section__genre}>
-              {movie.genres && <span key={movie.id}>{movie.genres?.[0].name}</span>}
-            </span>
-          </div>
-        ))}
+            ))
+          : moviesHook.map((movie) => (
+              <MoviesInTheaters
+                key={movie.id}
+                id={movie.id}
+                poster_path={movie.poster_path}
+                vote_average={movie.vote_average}
+                title={movie.title}
+                genres={movie.genres?.[0]}
+              />
+            ))}
       </div>
     </section>
   );

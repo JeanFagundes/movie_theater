@@ -1,12 +1,18 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, createContext, ReactNode } from 'react';
 import axios from 'axios';
 import ICredits from 'types/ICredits';
 import IDetails from 'types/IDetails';
 import IVideos from 'types/IVideos';
 import INowPlaying from 'types/INowPlaying';
 import IGenres from 'types/IGenres';
+import IWatchProvider from 'types/IWatchProviders';
 
-export default function RequisicaoAxios() {
+const RequisicaoContext = createContext<INowPlaying[]>([]);
+
+interface RequisicaoProviderProps {
+  children: ReactNode;
+}
+export function RequisicaoProvider({ children }: RequisicaoProviderProps) {
   const [moviesPlaying, setMoviesPlaying] = useState<INowPlaying[]>([]);
 
   useEffect(() => {
@@ -72,19 +78,36 @@ export default function RequisicaoAxios() {
             },
           };
 
-          const [detailsResponse, videosResponse, creditsResponse, genresResponse] =
-            await Promise.all([
-              axios.request(detailsOptions),
-              axios.request(videosOptions),
-              axios.request(creditsOptions),
-              axios.request(genresOptions),
-            ]);
+          const watchProviderOptions = {
+            method: 'GET',
+            url: `https://api.themoviedb.org/3/movie/${movie.id}/watch/providers`,
+            params: { language: 'en-US' },
+            headers: {
+              accept: 'application/json',
+              Authorization:
+                'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkMDAzZmM5NzM4MjFlNThjZGY1OTgxOGEwNDQ4MjUzYSIsInN1YiI6IjY0NjcwMjAxYTUwNDZlMDE2ODM2MWY2OSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.bOZaLsMPZbnvsfJSFyDYEHMdbju54j9XNTD8OBd7f-A',
+            },
+          };
+
+          const [
+            detailsResponse,
+            videosResponse,
+            creditsResponse,
+            genresResponse,
+            watchProviderResponse,
+          ] = await Promise.all([
+            axios.request(detailsOptions),
+            axios.request(videosOptions),
+            axios.request(creditsOptions),
+            axios.request(genresOptions),
+            axios.request(watchProviderOptions),
+          ]);
 
           const genres: IGenres[] = genresResponse.data.genres;
           const { runtime, id }: IDetails = detailsResponse.data;
           const videos: IVideos[] = videosResponse.data.results;
           const credits: ICredits[] = creditsResponse.data.cast;
-
+          const watch_provider: IWatchProvider = watchProviderResponse.data.results.US;
           const updatedMovie: INowPlaying = {
             ...movie,
             details: {
@@ -94,6 +117,7 @@ export default function RequisicaoAxios() {
             genres,
             videos,
             credits,
+            watch_provider,
           };
 
           updatedMoviesPlaying.push(updatedMovie);
@@ -116,5 +140,11 @@ export default function RequisicaoAxios() {
       clearInterval(interval);
     };
   }, []);
-  return moviesPlaying;
+  return (
+    <RequisicaoContext.Provider value={moviesPlaying}>
+      {children}
+    </RequisicaoContext.Provider>
+  );
 }
+
+export default RequisicaoContext;

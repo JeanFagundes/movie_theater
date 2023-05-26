@@ -12,6 +12,8 @@ code {
 }
 body {
   background-color: #f6f6f6;
+  max-width: 425px;
+  min-width: 360px;
 }
 
 * {

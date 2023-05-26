@@ -10,11 +10,15 @@ interface IProps {
 export default function BackButton({ children }: IProps) {
   const navigate = useNavigate();
 
+  const handleClick = () => {
+    navigate(-1);
+  };
+
   return (
     <div className={styles.container}>
       <div className={styles.container__header}>
         <MdOutlineArrowBackIosNew
-          onClick={() => navigate(-1)}
+          onClick={handleClick}
           className={styles.container__icon}
           size={20}
         />

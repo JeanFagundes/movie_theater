@@ -1,0 +1,41 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  background: #1f293d 70%;
+  margin: 0;
+  padding: 0;
+  h2 {
+    color: #ffffff;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  span {
+    color: #ffffff;
+  }
+  ul {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    justify-content: center;
+  }
+
+  ul li {
+    display: flex;
+    flex-direction: column;
+    width: 22%;
+  }
+  li {
+    margin-right: 4px;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  img.container__logo {
+    width: 100%;
+  }
+}
